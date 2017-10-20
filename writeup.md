@@ -33,15 +33,15 @@ Lane detection is a complex process. As in most computer vision problems the fir
 
 If we look into the sample image above we can clearly identify that the lane lines are usually white or yellow in color. So the step one would be as follows.
 
-  > __ Select yellow and white color regions from the image __
+  > __Select yellow and white color regions from the image__
 
 The second thing we find about the lane lines in our sample images is that the lane lines have a good deal of contrast difference with the background which is the road. This means that we can do edge detection in these images to find the boundaries of lane lines. Thus the step two will be as follows.
 
-  > __ Do edge detection to get the edges of lane lines __
+  > __Do edge detection to get the edges of lane lines__
 
 Another thing to observe is that lane lines are not everywhere in the image they are in the bottom half towards the middle. This means that we can shorten our search within a trapezoid within the image. Thus the step 3 will be:
 
-  > __ Identify a region on interest and discard other regions __
+  > __Identify a region on interest and discard other regions__
 
 With that step we are left with identifying lines in the edge detected image. This can be done by Hough lane detection algorithm. Thus the forth step will be to find straight lines in the edge detected image using hough transform.
 
